@@ -325,3 +325,100 @@ services:
 
 networks:
   default:
+
+爬虫
+
+   
+
+    手动上传 
+        
+        git： http://git.177.me/congcong/xiami-uploader     
+        地址： http://103.93.79.113:8989/xm-file/upload
+        服务器：  103.93.79.113   root   密码  Et20191010=
+        维护： 若需要用（https://cn-v.jav101.com/ ，https://cn-v.jav101.com/） 需要先进入 script 文件夹  python handle_cookie.py
+        
+
+    虾米爬虫
+        git： http://git.177.me/congcong/xiami-auto-crawler
+        地址： http://103.93.79.113:5000/vdo/index
+        服务器：  103.93.79.113   root   密码   XIAMISPIDER1602146315
+
+    维护： 
+        1.进入服务器查看： tmux a -t yd ，通过ctrl+b 切换窗口
+        2. 
+           1. cd web , gunicorn -w 4 -b 0.0.0.0:5000  web:app  自动配置的web服务
+        
+           2. python3 crawler_runner.py pic  图片+小说 自动采集
+           3. python3 crawler.py vdo 视频自动采集
+        
+           4. python3  uploader_app.py  vdo 视频上传  (必须启动，视频切割，加片头 转成m3u8 上传到b2文件存储)
+           
+           5. python3  uploader_app.py  up 扫描上传的脚本 
+
+           6. java -jar  b2-uploader-0.0.1-9.24.jar  手动上传的服务
+
+        3.建议图片小说自动（运行2.1, 2.2）  视频可手动 (2.4 2.5 2.6)
+
+越南彩票
+
+    git： http://git.177.me/congcong/lottery-service-api
+    地址： http://lottery-api.t595959.com:9999/api/index?token=cc123456789
+    服务器:125.212.249.143 用户：administrator 密码：Lottery@A15
+
+
+    维护： 项目本地位置 C:\Users\Administrator\Desktop\code\lottery
+           1.远程连接 并将窗口缩到最小 ，最小化 每天上下班看下 保持 开奖页面打开的
+           2.进入彩票大厅 mitmdump -s vetname.py -p 8888 
+           3.python web.py  接口服务
+          4.	java -jar C:\Users\Administrator\Desktop\code\sikulix\sikulix.jar 然后点击运行 ，此脚本   会在断开心跳时根据（基于图片识别）刷新
+          5.保持浏览器打开在开奖页面 ，且 窗口摆放如图 a.jpg  ，这样4  会判断是否断开了连接从而刷新。
+
+
+服务检测小飞机报警 
+    git: http://git.177.me/congcong/sever-monitor-bot
+    小飞机机器人  @congcongdebot 
+
+内网穿透服务 
+    地址 ：http://154.223.153.61:8080/login/index (用户名：caihong_dev 密码： CokeCola123)
+    服务器:  IP：154.223.153.61   root  密码：NXJCq5Kp
+    
+    维护 ： 客户端在 本地服务器 10.10.110.21上。
+    文档 ： https://ehang-io.github.io/nps/#/?id=nps
+
+cdn 服务
+    主控地址 http://154.223.140.163:1280/fikcdn/admin/main.php(用户名 admin  密码：Zaq123456789.)
+    服务器： 154.223.140.163  administrator  密码： fxdLVfRa
+
+    节点(156.236.101.233  ,   156.236.102.3  ,   8.210.128.125)
+
+    文档： https://www.fikker.com/
+    
+    
+203.189.237.164-165/
+账户root/root1
+端口22
+密码3$Eyfk#GNf
+
+==================================================================
+外网面板地址: http://203.189.237.164:8888/2b4489d4
+内网面板地址: http://203.189.237.164:8888/2b4489d4
+username: xpg9avt8
+password: 1e684afd
+
+
+*IP地址
+高防：23.225.248.26-30 (5G防御)
+
+
+*服务器登陆信息
+操作系统及版本：Ubuntu 20.04.1
+登陆IP地址：23.225.248.26
+默认账号：root
+默认密码：RxfiGnsYGC
+
+
+外网面板地址: http://23.225.248.26:8888/649e26a8
+内网面板地址: http://23.225.248.26:8888/649e26a8
+username: xuayznxi
+password: e10b5c36
+
